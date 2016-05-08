@@ -1,6 +1,6 @@
 {
   "name": "k-mongoose-soft-delete",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An advanced package for softdeleting models with mongoose ",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,6 @@
     "node": ">= 4.4.2"
   },
   "dependencies": {
-    "i18n-xlocale": "0.0.1",
     "lodash": "^4.9.0",
     "mongoose": "^4.4.12",
     "shortid": "^2.2.6"
