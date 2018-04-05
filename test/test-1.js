@@ -75,7 +75,7 @@ describe('Default plugin usage', function () {
             should.not.exist(err);
             should.exist(doc);
             doc.should.be.an('array')
-                .with.deep.property('[0]')
+                .with.deep.property(0)
                 .that.have.property("title",title);
 
             resource = doc[0];
