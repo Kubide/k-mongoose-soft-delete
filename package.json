@@ -1,6 +1,6 @@
 {
   "name": "k-mongoose-soft-delete",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An advanced package for softdeleting models with mongoose ",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,8 @@
   "author": "Kubide <hola@kubide.es> (http://kubide.es)",
   "contributors": [
     "Ángel Luis Quesada <angel.quesada@kubide.es> (http://gelito.me)",
-    "Eneko Lakasta <eneko.lakasta@kubide.es>"
+    "Eneko Lakasta <eneko.lakasta@kubide.es>",
+    "Roberto Marín <roberto.marin@kubide.io>"
   ],
   "license": "MIT",
   "bugs": {

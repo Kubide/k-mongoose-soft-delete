@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
 
 /* Setup */
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/k-mongoose-soft-delete');
+mongoose.connect('mongodb://localhost:27018/k-mongoose-soft-delete');
 
 Resource = new mongoose.Schema({
     title: {type: String},
@@ -83,14 +83,12 @@ describe('Default plugin usage', function () {
         });
     });
 
-    it('Softdelete the resource', function (done) {
-        resource.softDelete(function(err){
-            should.not.exist(err);
-            resource.should.have.property('deleted').and.equal(true);
-            resource.should.have.property('second').and.equal(null);
-            resource.should.have.property('third').and.not.equal(third);
-            done();
-        });
+    it('Softdelete the resource', async function () {
+        const result = await resource.softDelete();
+        should.not.exist(result);
+        resource.should.have.property('deleted').and.equal(true);
+        resource.should.have.property('second').and.equal(null);
+        resource.should.have.property('third').and.not.equal(third);
     });
 
 
